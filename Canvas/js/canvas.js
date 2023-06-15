@@ -106,6 +106,25 @@ const ctx = canvas.getContext('2d');
 // drawCircle(100,100, 20, Math.PI*2);
 // drawCircle(100,100, 10, Math.PI*2);
 
+// function drawCri(x,y,radius, fillOrStroke, color) {
+//     ctx.strokeStyle = color;
+//     ctx.fillStyle = color;
+//     ctx.lineWidth = 4;
+//     ctx.beginPath();
+//     ctx.arc(x, y, radius, 0, Math.PI*2, false);
+//     (fillOrStroke === true) ? ctx.fill() : ctx.stroke();
+    
+// }
+
+// drawCri(200, 200, 30, false, "white"); // head
+// drawCri(190, 190, 6, true, "green");//left eye
+// drawCri(210, 190, 6, true, "green");// right eye
+// drawCri(200, 203, 6, true, "orange");//nose
+// drawCri(200, 270, 40, false, "white");//body
+// drawCri(200, 250, 6, true, "black");
+// drawCri(200, 266, 6, true, "black");
+// drawCri(200, 282, 6, true, "black");
+
 function drawCri(x,y,radius, fillOrStroke, color) {
     ctx.strokeStyle = color;
     ctx.fillStyle = color;
@@ -116,14 +135,21 @@ function drawCri(x,y,radius, fillOrStroke, color) {
     
 }
 
-drawCri(200, 200, 30, false, "white"); // head
-drawCri(190, 190, 6, true, "green");//left eye
-drawCri(210, 190, 6, true, "green");// right eye
-drawCri(200, 203, 6, true, "orange");//nose
-drawCri(200, 270, 40, false, "white");//body
-drawCri(200, 250, 6, true, "black");
-drawCri(200, 266, 6, true, "black");
-drawCri(200, 282, 6, true, "black");
 
+function drawSnowman(x, y) {
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    drawCri(x, y, 30, false, "white"); // head
+    drawCri(x-10, y-10, 6, true, "green");//left eye
+    drawCri(x+10, y-10, 6, true, "green");// right eye
+    drawCri(x, y+3, 6, true, "orange");//nose
+    drawCri(x, y+70, 40, false, "white");//body
+    drawCri(x, y+50, 6, true, "black");
+    drawCri(x, y+66, 6, true, "black");
+    drawCri(x, y+82, 6, true, "black");
+}
+
+
+drawSnowman(100,100);
 
 
