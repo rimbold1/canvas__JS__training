@@ -125,49 +125,50 @@ const ctx = canvas.getContext('2d');
 // drawCri(200, 266, 6, true, "black");
 // drawCri(200, 282, 6, true, "black");
 
-function drawCri(x,y,radius, fillOrStroke, color) {
-    ctx.strokeStyle = color;
-    ctx.fillStyle = color;
-    ctx.lineWidth = 4;
-    ctx.beginPath();
-    ctx.arc(x, y, radius, 0, Math.PI*2, false);
-    (fillOrStroke === true) ? ctx.fill() : ctx.stroke();
+// function drawCri(x,y,radius, fillOrStroke, color) {
+//     ctx.strokeStyle = color;
+//     ctx.fillStyle = color;
+//     ctx.lineWidth = 4;
+//     ctx.beginPath();
+//     ctx.arc(x, y, radius, 0, Math.PI*2, false);
+//     (fillOrStroke === true) ? ctx.fill() : ctx.stroke();
     
-}
+// }
 
 
-function drawSnowman(x, y) { // function that draws snowman by the given coordinates.
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    drawCri(x, y, 30, false, "white"); // head
-    drawCri(x-10, y-10, 6, true, "green");//left eye
-    drawCri(x+10, y-10, 6, true, "green");// right eye
-    drawCri(x, y+3, 6, true, "orange");//nose
-    drawCri(x, y+70, 40, false, "white");//body
-    drawCri(x, y+50, 6, true, "black");
-    drawCri(x, y+66, 6, true, "black");
-    drawCri(x, y+82, 6, true, "black");
-}
+// function drawSnowman(x, y) { // function that draws snowman by the given coordinates.
+//     ctx.beginPath();
+//     ctx.moveTo(x, y);
+//     drawCri(x, y, 30, false, "white"); // head
+//     drawCri(x-10, y-10, 6, true, "green");//left eye
+//     drawCri(x+10, y-10, 6, true, "green");// right eye
+//     drawCri(x, y+3, 6, true, "orange");//nose
+//     drawCri(x, y+70, 40, false, "white");//body
+//     drawCri(x, y+50, 6, true, "black");
+//     drawCri(x, y+66, 6, true, "black");
+//     drawCri(x, y+82, 6, true, "black");
+// }
 
 
-drawSnowman(100,100);
+// drawSnowman(100,100);
 
 // next function
 
-let points = [[50, 50], [50,100], [100,100], [100,50], [50,50]];
-let mysteryPoints = [[50, 50], [50, 100], [25, 120], [100, 50], [70, 90], [100, 90], [70, 120]];
+// let points = [[50, 50], [50,100], [100,100], [100,50], [50,50]];
+// let mysteryPoints = [[50, 50], [50, 100], [25, 120], [100, 50], [70, 90], [100, 90], [70, 120]];
 
-function drawPoints(array) { // function that draws lines by the given coordinates.
-    let x = array[0][0];
-    let y = array[0][1];
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        ctx.lineTo(element[0], element[1]);
-    }
-    ctx.stroke();
-}
+// function drawPoints(array) { // function that draws lines by the given coordinates.
+//     let x = array[0][0];
+//     let y = array[0][1];
+//     ctx.beginPath();
+//     ctx.moveTo(x, y);
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+//         ctx.lineTo(element[0], element[1]);
+//     }
+//     ctx.stroke();
+// }
 
-drawPoints(points);
-drawPoints(mysteryPoints);
+// drawPoints(points);
+// drawPoints(mysteryPoints);
+
