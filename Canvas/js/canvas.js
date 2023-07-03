@@ -172,3 +172,18 @@ const ctx = canvas.getContext('2d');
 // drawPoints(points);
 // drawPoints(mysteryPoints);
 
+
+canvas.addEventListener('mousedown', function startDraw(e) {
+    ctx.beginPath();
+});
+
+canvas.addEventListener('mousemove', (e) => {
+    x = e.offsetX;
+    y = e.offsetY;
+    ctx.arc(x, y, 3, 0, Math.PI*2, true);
+});
+
+canvas.addEventListener('mouseup', () => {
+    ctx.strokeStyle = "green";
+    ctx.stroke();
+});
